@@ -1,0 +1,296 @@
+{
+  "version": "v2.0.0-deepml",
+  "trained_at": "2026-11-06T22:47:21.977702",
+  "training_samples": 1440,
+  "test_samples": 360,
+  "feature_count": 14,
+  "feature_columns": [
+    "task_completion_rate",
+    "on_time_delivery_rate",
+    "overdue_task_ratio",
+    "estimation_accuracy",
+    "review_participation_rate",
+    "review_turnaround_hours",
+    "workload_capacity_index",
+    "commit_frequency_weekly",
+    "reopened_task_ratio",
+    "data_points_count",
+    "sprint_consistency_index",
+    "burnout_risk_indicator",
+    "code_stability_score",
+    "pr_efficiency_ratio"
+  ],
+  "champion_regressor": "RidgeRegression",
+  "champion_classifier": "RandomForestClassifier",
+  "regression_benchmark": {
+    "RandomForestRegressor": {
+      "cv_r2_mean": 0.856,
+      "cv_mae_mean": 1.55,
+      "test_r2": 0.875,
+      "test_mae": 1.52,
+      "test_rmse": 1.88,
+      "test_mape_pct": 2.08,
+      "is_champion": false
+    },
+    "GradientBoostingRegressor": {
+      "cv_r2_mean": 0.856,
+      "cv_mae_mean": 1.55,
+      "test_r2": 0.872,
+      "test_mae": 1.52,
+      "test_rmse": 1.91,
+      "test_mape_pct": 2.07,
+      "is_champion": false
+    },
+    "RidgeRegression": {
+      "cv_r2_mean": 0.874,
+      "cv_mae_mean": 1.45,
+      "test_r2": 0.885,
+      "test_mae": 1.44,
+      "test_rmse": 1.81,
+      "test_mape_pct": 1.97,
+      "is_champion": true
+    }
+  },
+  "classification_benchmark": {
+    "RandomForestClassifier": {
+      "cv_roc_auc_mean": 0.714,
+      "cv_f1_mean": 0.219,
+      "test_accuracy": 0.853,
+      "test_precision": 0.667,
+      "test_recall": 0.107,
+      "test_f1": 0.185,
+      "test_roc_auc": 0.764,
+      "brier_score_loss": 0.117,
+      "is_champion": true
+    },
+    "GradientBoostingClassifier": {
+      "cv_roc_auc_mean": 0.699,
+      "cv_f1_mean": 0.298,
+      "test_accuracy": 0.839,
+      "test_precision": 0.438,
+      "test_recall": 0.125,
+      "test_f1": 0.194,
+      "test_roc_auc": 0.756,
+      "brier_score_loss": 0.121,
+      "is_champion": false
+    },
+    "LogisticRegression": {
+      "cv_roc_auc_mean": 0.732,
+      "cv_f1_mean": 0.182,
+      "test_accuracy": 0.847,
+      "test_precision": 0.571,
+      "test_recall": 0.071,
+      "test_f1": 0.127,
+      "test_roc_auc": 0.755,
+      "brier_score_loss": 0.118,
+      "is_champion": false
+    }
+  },
+  "feature_importances": [
+    {
+      "feature": "sprint_consistency_index",
+      "importance_score": 0.7078,
+      "importance_pct": 70.8
+    },
+    {
+      "feature": "on_time_delivery_rate",
+      "importance_score": 0.1596,
+      "importance_pct": 16.0
+    },
+    {
+      "feature": "pr_efficiency_ratio",
+      "importance_score": 0.0375,
+      "importance_pct": 3.7
+    },
+    {
+      "feature": "estimation_accuracy",
+      "importance_score": 0.0294,
+      "importance_pct": 2.9
+    },
+    {
+      "feature": "review_participation_rate",
+      "importance_score": 0.0145,
+      "importance_pct": 1.5
+    },
+    {
+      "feature": "overdue_task_ratio",
+      "importance_score": 0.0121,
+      "importance_pct": 1.2
+    },
+    {
+      "feature": "task_completion_rate",
+      "importance_score": 0.0073,
+      "importance_pct": 0.7
+    },
+    {
+      "feature": "data_points_count",
+      "importance_score": 0.0063,
+      "importance_pct": 0.6
+    },
+    {
+      "feature": "review_turnaround_hours",
+      "importance_score": 0.0059,
+      "importance_pct": 0.6
+    },
+    {
+      "feature": "burnout_risk_indicator",
+      "importance_score": 0.005,
+      "importance_pct": 0.5
+    },
+    {
+      "feature": "workload_capacity_index",
+      "importance_score": 0.0044,
+      "importance_pct": 0.4
+    },
+    {
+      "feature": "commit_frequency_weekly",
+      "importance_score": 0.0041,
+      "importance_pct": 0.4
+    },
+    {
+      "feature": "reopened_task_ratio",
+      "importance_score": 0.0032,
+      "importance_pct": 0.3
+    },
+    {
+      "feature": "code_stability_score",
+      "importance_score": 0.003,
+      "importance_pct": 0.3
+    }
+  ],
+  "baseline_expected_score": 73.4,
+  "baseline_feature_stats": {
+    "task_completion_rate": {
+      "mean": 0.7123294444444445,
+      "std": 0.056075752977142936,
+      "min": 0.509,
+      "p25": 0.677,
+      "p50": 0.7135,
+      "p75": 0.749,
+      "max": 0.905
+    },
+    "on_time_delivery_rate": {
+      "mean": 0.6716261111111111,
+      "std": 0.06957932585411691,
+      "min": 0.358,
+      "p25": 0.63,
+      "p50": 0.675,
+      "p75": 0.718,
+      "max": 0.867
+    },
+    "overdue_task_ratio": {
+      "mean": 0.23670166666666667,
+      "std": 0.05637738516539967,
+      "min": 0.075,
+      "p25": 0.2,
+      "p50": 0.2345,
+      "p75": 0.271,
+      "max": 0.46
+    },
+    "estimation_accuracy": {
+      "mean": 0.7772783333333334,
+      "std": 0.06774627957557001,
+      "min": 0.58,
+      "p25": 0.72875,
+      "p50": 0.779,
+      "p75": 0.8232499999999999,
+      "max": 0.98
+    },
+    "review_participation_rate": {
+      "mean": 0.7601544444444444,
+      "std": 0.07616361029600015,
+      "min": 0.484,
+      "p25": 0.708,
+      "p50": 0.76,
+      "p75": 0.812,
+      "max": 1.0
+    },
+    "review_turnaround_hours": {
+      "mean": 5.5328333333333335,
+      "std": 1.9734380613794718,
+      "min": 2.5,
+      "p25": 4.2,
+      "p50": 5.1,
+      "p75": 6.4,
+      "max": 20.4
+    },
+    "workload_capacity_index": {
+      "mean": 1.05205,
+      "std": 0.23940534016240492,
+      "min": 0.5,
+      "p25": 0.89,
+      "p50": 1.05,
+      "p75": 1.21,
+      "max": 1.95
+    },
+    "commit_frequency_weekly": {
+      "mean": 12.676666666666666,
+      "std": 3.9542843406899975,
+      "min": 2.0,
+      "p25": 10.0,
+      "p50": 13.0,
+      "p75": 15.0,
+      "max": 27.0
+    },
+    "reopened_task_ratio": {
+      "mean": 0.07314999999999999,
+      "std": 0.021611295247345234,
+      "min": 0.003,
+      "p25": 0.059,
+      "p50": 0.073,
+      "p75": 0.087,
+      "max": 0.164
+    },
+    "data_points_count": {
+      "mean": 28.657222222222224,
+      "std": 10.818824979457675,
+      "min": 10.0,
+      "p25": 20.0,
+      "p50": 28.0,
+      "p75": 38.0,
+      "max": 47.0
+    },
+    "sprint_consistency_index": {
+      "mean": 0.48185833333333333,
+      "std": 0.08408487491546711,
+      "min": 0.182,
+      "p25": 0.429,
+      "p50": 0.481,
+      "p75": 0.535,
+      "max": 0.781
+    },
+    "burnout_risk_indicator": {
+      "mean": 0.6267066666666667,
+      "std": 0.1339081744230752,
+      "min": 0.175,
+      "p25": 0.54,
+      "p50": 0.637,
+      "p75": 0.723,
+      "max": 0.987
+    },
+    "code_stability_score": {
+      "mean": 0.92685,
+      "std": 0.021611295247345213,
+      "min": 0.836,
+      "p25": 0.913,
+      "p50": 0.927,
+      "p75": 0.941,
+      "max": 0.997
+    },
+    "pr_efficiency_ratio": {
+      "mean": 0.7437922222222222,
+      "std": 0.14433136610351507,
+      "min": 0.305,
+      "p25": 0.645,
+      "p50": 0.741,
+      "p75": 0.843,
+      "max": 1.185
+    }
+  },
+  "governance": {
+    "validation_strategy": "5-Fold Stratified Cross-Validation + 20% Holdout Test",
+    "fairness_safeguard": "Strictly excludes age, gender, race, or non-work behavioral signals.",
+    "explainability_engine": "Decomposed Tree Leaf Attribution & Counterfactual Frontier",
+    "drift_detection": "Continuous Population Stability Index (PSI) & Mahalanobis Anomaly Filter"
+  }
+}

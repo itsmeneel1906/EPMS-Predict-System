@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #FAF8F5;
+    --bg-cream: #FFFDF9;
+    --text-primary: #34323D;
+    --text-secondary: #777482;
+    --text-dark: #292735;
+    --border-soft: #EAE6E0;
+    
+    /* Pastel Theme Accents */
+    --pastel-lavender: #DCD6F7;
+    --pastel-lavender-hover: #D1CAF2;
+    --pastel-lavender-subtle: #F2EEFC;
+    --pastel-sage: #DCE8D5;
+    --pastel-sage-subtle: #F3F7F0;
+    --pastel-blue: #D8E9F7;
+    --pastel-blue-subtle: #F1F7FD;
+    --pastel-pink: #F4DDE3;
+    --pastel-pink-subtle: #FCF4F6;
+    --pastel-peach: #F7E1D0;
+    --pastel-peach-subtle: #FCF5EF;
+  }
+
+  .dark {
+    --bg-base: #14131A;
+    --bg-cream: #1B1A24;
+    --text-primary: #DDD9E6;
+    --text-secondary: #9692A6;
+    --text-dark: #F5F2FC;
+    --border-soft: #2B2938;
+
+    --pastel-lavender: #393452;
+    --pastel-lavender-hover: #453F63;
+    --pastel-lavender-subtle: #242036;
+    --pastel-sage: #2C382A;
+    --pastel-sage-subtle: #1C241B;
+    --pastel-blue: #233445;
+    --pastel-blue-subtle: #16222E;
+    --pastel-pink: #422831;
+    --pastel-pink-subtle: #2B181F;
+    --pastel-peach: #453123;
+    --pastel-peach-subtle: #2B1E15;
+  }
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Soft Pastel Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E0DDD7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CCC8C0;
+}
+
+/* Pastel UI Card Utilities */
+.pastel-card {
+  background-color: #FFFDF9;
+  border: 1px solid #EAE6E0;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px -2px rgba(52, 50, 61, 0.04), 0 1px 3px 0 rgba(52, 50, 61, 0.02);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pastel-card-hover:hover {
+  border-color: #DDD8D0;
+  box-shadow: 0 8px 24px -4px rgba(52, 50, 61, 0.07), 0 2px 6px -1px rgba(52, 50, 61, 0.03);
+  transform: translateY(-1px);
+}
+
+.pastel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+}
+
+.badge-lavender {
+  background-color: #F2EEFC;
+  color: #4C4472;
+  border: 1px solid #DCD6F7;
+}
+
+.badge-sage {
+  background-color: #F3F7F0;
+  color: #385E30;
+  border: 1px solid #DCE8D5;
+}
+
+.badge-blue {
+  background-color: #F1F7FD;
+  color: #2B577E;
+  border: 1px solid #D8E9F7;
+}
+
+.badge-pink {
+  background-color: #FCF4F6;
+  color: #83394C;
+  border: 1px solid #F4DDE3;
+}
+
+.badge-peach {
+  background-color: #FCF5EF;
+  color: #8C552A;
+  border: 1px solid #F7E1D0;
+}
